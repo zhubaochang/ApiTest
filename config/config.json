@@ -1,0 +1,8 @@
+{
+  "email":{
+           "from": "123@qq.com",
+           "to": "123@qq.com, 456@qq.com",
+           "passwd": "123456"
+  }
+
+}

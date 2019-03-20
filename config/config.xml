@@ -1,0 +1,34 @@
+<project>
+    <config>
+
+    </config>
+    <cases>
+        <LivenessHackDetect-file_normal/>
+        <LivenessHackDetect-image_normal/>
+        <LivenessHackDetect-url_normal/>
+        <LivenessHackDetect-image_file_url/>
+        <LivenessHackDetect-file_url/>
+        <LivenessHackDetect-file_miss/>
+        <LivenessHackDetect-file_name_wrong/>
+        <LivenessHackDetect-image_name_wrong/>
+        <LivenessHackDetect-url_name_wrong/>
+        <LivenessHackDetect-useless_para/>
+        <LivenessHackDetect-imageid_not_exist/>
+        <LivenessHackDetect-download_error/>
+        <LivenessHackDetect-wrong_liveness_data/>
+        <LivenessHackDetect-jpeg/>
+        <LivenessHackDetect-tga/>
+        <LivenessHackDetect-apiid_wrong/>
+        <LivenessHackDetect-apiid_null/>
+        <LivenessHackDetect-apiid_miss/>
+        <LivenessHackDetect-apisecret_wrong/>
+        <LivenessHackDetect-apisecret_null/>
+        <LivenessHackDetect-apisecret_miss/>
+        <LivenessHackDetect-key_expired/>
+        <LivenessHackDetect-no_permission/>
+        <LivenessHackDetect-out_of_quota/>
+    </cases>
+    <excelcases>
+        <case_template/>
+    </excelcases>
+</project>

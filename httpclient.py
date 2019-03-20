@@ -5,11 +5,17 @@
 # @File : httpclient.py 
 # @Software: PyCharm
 import csv
+import os
+
 import pandas
 import unittest
 
 import jsonpath
 import requests
+
+import util
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 class Method:
@@ -24,6 +30,14 @@ class Type:
     XML = 3
     FORM_FILE = 4
     FILE = 5
+
+
+# excel驱动版本,获取全局数据sheet内容
+data = util.read_config_excel(BASE_DIR + '/excel_cases/case_template.xlsx', '全局数据').get('全局数据')
+DATA = {}
+if data:
+    for d in data:
+        DATA[d.get('变量名')] = d.get('变量值')
 
 
 class HttpClient(unittest.TestCase):
@@ -275,6 +289,7 @@ class HttpClient(unittest.TestCase):
             print(e)
             raise Exception("存储路径错误")
 
+    # 根据响应状态码统计调用次数
     def data_statistics(self, path):
         df = pandas.read_csv(path)
         return df[df.apiid == '557c656d71f54a7e8f8c681d7a9ab006'].status.value_counts()
